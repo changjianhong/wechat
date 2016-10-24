@@ -1,0 +1,5 @@
+<template name="showimg">
+    <view class="showimg" hidden="{{showimg.hidden}}" bindtap="showimgTap" animation="{{showimg.bgAnimation}}">
+        <image src="{{showimg.image}}" animation="{{showimg.animation}}" mode="aspectFit" style="width:{{showimg.width}}rpx; height:{{showing.height}}rpx; margin-left:{{showimg.left}}px; margin-top:{{showimg.top}}px"></image>                            
+    </view>
+</template>

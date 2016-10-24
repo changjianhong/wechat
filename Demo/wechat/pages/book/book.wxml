@@ -1,0 +1,11 @@
+<view class="page">
+    <scroll-view class="book-scroll" scroll-y="true" bindscrolltoupper="refreshData" bindscrolltolower="loadData">
+        <view class="book-item" wx:for="{{books}}" wx:for-item="book">
+            <view class="book-item-t">
+                <text class="book-item-title">{{book.title}}</text>
+                <text class="book-item-author">{{book.author}}</text>
+            </view>
+            <text class="book-item-chapter">共{{book.chapter}}章</text>
+        </view>
+    </scroll-view>
+</view>

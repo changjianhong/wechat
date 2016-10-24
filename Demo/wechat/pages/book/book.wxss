@@ -1,0 +1,30 @@
+.book-scroll {
+    height: 100%;
+    font-family: "微软雅黑";
+}
+.book-item {
+    background-color: #fff;
+    border-bottom: 1rpx solid #eee;
+    padding: 20rpx 32rpx;
+    cursor: pointer;
+}
+.book-item text {
+    padding-bottom: 16rpx;
+}
+
+.book-item-t {
+    display: flex;
+}
+.book-item-t text {
+    font-size: 32rpx;
+    color: #2A3342;
+}
+.book-item-title {
+    flex: 1;
+}
+
+
+.book-item-chapter {
+    color: #737780;
+    font-size: 16rpx;
+}
