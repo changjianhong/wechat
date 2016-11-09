@@ -6,6 +6,7 @@
 
 .head {
     position:relative;
+    top: 0;
     background-color: #fff;
 }
 

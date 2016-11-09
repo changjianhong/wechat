@@ -13,10 +13,10 @@
         </view>  
     </view>
 
-    <view class="category" wx:for="{{category}}" wx:for-item="item">
+    <view class="category" wx:for="{{category}}" wx:for-item="item" wx:key="unique">
         <view class="category_section">
             <view class="sectionSpace"></view>
-            <view class="category_item" wx:for="{{item.category_item}}" wx:for-item="i" data-log="{{i.name}}" data-url="{{i.url}}" bindtap="goPage">
+            <view class="category_item" wx:key="unique" wx:for="{{item.category_item}}" wx:for-item="i" data-log="{{i.name}}" data-url="{{i.url}}" bindtap="goPage">
                 <image src="{{i.img}}" />
                 <text class="title">{{i.name}}</text>
             </view>
@@ -24,7 +24,7 @@
     </view>
 
     <action-sheet hidden="{{actionSheetHidden}}">
-        <block wx:for="{{actionSheetItems}}">
+        <block wx:key="unique" wx:for="{{actionSheetItems}}">
             <action-sheet-item class="item" bindtap="actionSheetItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
         </block>
         <action-sheet-cancel class="cancel" bindtap="actionSheetCancel">取消</action-sheet-cancel>

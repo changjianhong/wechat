@@ -60,11 +60,11 @@ Page({
   //head background animation
   touchstart: function(e) {
       originHeight = 400;
-      touchStartPointY = e.touches[0].screenY;
+      touchStartPointY = e.touches[0].clientY;
   },
   touchmove: function(e) {
-      var pointY = e.touches[0].screenY;
-      var height = originHeight + pointY - touchStartPointY
+      var pointY = e.touches[0].clientY;
+      var height = originHeight + pointY - touchStartPointY;
       this.setData({
           headHeight:height
       });
@@ -127,7 +127,7 @@ Page({
       var animation = wx.createAnimation({
           duration:350
       });
-      animation.translateY(200).scale(750/120).step();
+      animation.translateY(100).scale(750/120).step();
 
       var showimg = this.data.showimg;
       showimg.hidden = !showimg.hidden;
